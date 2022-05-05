@@ -1,0 +1,618 @@
+::-moz-selection {
+    /* Code for Firefox */
+    color: black;
+    background: #00B8F8;
+}
+
+ ::selection {
+    color: black;
+    background: #00B8F8;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "banner barras barras" "contacto contacto contacto" "slider slider slider" "servicios servicios servicios" "somos somos valores" "mision mision valores" "vision vision valores" "fabrica fabrica fabrica" "envios envios envios" "form form form" "sub-foot sub-foot sub-foot" "footer footer footer";
+}
+
+.main .banner-1 {
+    grid-area: banner;
+    height: 90vh;
+}
+
+.main .image-main {
+    background: url("../images/menu.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.main .barras {
+    grid-area: barras;
+    height: 90vh;
+    /* background-color: rebeccapurple; */
+}
+
+.main .contacto {
+    grid-area: contacto;
+    height: 70px;
+}
+
+.main .slider {
+    grid-area: slider;
+    /* background-color: chartreuse; */
+    height: 100vh;
+}
+
+.main .servicios {
+    grid-area: servicios;
+}
+
+.main .somos {
+    grid-area: somos;
+}
+
+#somos-content {
+    overflow-x: hidden;
+}
+
+.main .mision {
+    grid-area: mision;
+}
+
+.main .vision {
+    grid-area: vision;
+}
+
+.main .valores {
+    grid-area: valores;
+    height: 100%;
+}
+
+.main .fabrica {
+    grid-area: fabrica;
+    height: 100vh;
+    /* background-color: rebeccapurple; */
+}
+
+.main .envios {
+    grid-area: envios;
+    background-color: #FF00AE;
+    width: 100%;
+    color: #fff;
+}
+
+.main .contacto-form {
+    grid-area: form;
+    height: 100%;
+}
+
+.main .sub-footer {
+    grid-area: sub-foot;
+}
+
+.main .footer {
+    grid-area: footer;
+    height: 100%;
+}
+
+
+/*FONT STYLES*/
+
+.products-title {
+    font-style: normal;
+    font-weight: bold;
+    color: #001480;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.title-black {
+    font-style: normal;
+    font-weight: bold;
+    color: #000;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.title-white {
+    font-style: normal;
+    font-weight: bold;
+    color: #ffff;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.title-valores {
+    font-style: normal;
+    font-weight: bold;
+    color: #ffff;
+    font-size: 2vw;
+    border-bottom: 3px solid #FF00AE;
+}
+
+.list-valores {
+    font-style: italic;
+}
+
+.list-val {
+    display: inline-block;
+    float: left;
+}
+
+.info ul {
+    font-weight: 800;
+}
+
+
+/*FIN DE ESTRUCTURA DE CSS GRID*/
+
+.navbar-dark .navbar-toggler {
+    color: white !important;
+    position: relative;
+    /* border-color: #e74c3c; */
+}
+
+.navbar-dark .navbar-toggler .navbar-collapse {
+    position: relative;
+    width: 11rem;
+    /* background: #343a40; */
+    background: #FF00AE;
+    top: 38px;
+    left: 0px;
+    border: 1px solid #FF00AE;
+    /* border-radius: 1px 10px 10px 10px; */
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.navbar-dark .navbar-toggler .navbar-collapse .nav-link:hover {
+    background-color: black;
+    color: #fff !important;
+    transition: 0.2s ease-in-out;
+}
+
+
+/*Contact*/
+
+.material-icons {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.info-contacto a {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/*slider*/
+
+.slider-mobil {
+    display: none;
+}
+
+#categories {
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Lato", sans-serif;
+}
+
+#categories .col-sm-3 {
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+#categories .col-sm-3 a {
+    display: block;
+}
+
+#categories .col-sm-3 img {
+    width: 100%;
+    max-width: none;
+}
+
+#categories .overlayPrint,
+.overlayAsesory,
+.overlayDesign,
+.overlayMade {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease-in-out;
+}
+
+#categories .overlayPrint:hover,
+.overlayAsesory:hover,
+.overlayDesign:hover,
+.overlayMade:hover {
+    background: none;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+.textOverlay h2 {
+    font-weight: bold;
+    font-size: 200%;
+    color: #fff;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #FF00AE;
+    border-top: 2px solid #FF00AE;
+    display: inline-block;
+}
+
+@media (min-width: 601px) and (max-width: 991px) {
+    .textOverlay h2 {
+        font-size: 190%;
+    }
+}
+
+.textOverlay p {
+    font-size: 165%;
+    color: #fff;
+    padding: 0px 25px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* First the Grid */
+
+.gallery-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* The Picture Frame */
+
+.gallery-frame {
+    /*  padding: .5rem;*/
+    font-size: 1.2rem;
+    text-align: center;
+    color: #d9d9d9;
+}
+
+
+/* The Images */
+
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.gallery-img:hover {
+    opacity: .7;
+}
+
+
+/* Nosotros/*/
+
+.back {
+    color: #fff;
+    background-color: #001480;
+    font-size: 18px;
+}
+
+.valores {
+    position: relative;
+    display: inline-block;
+    /* Make the width of box same as image */
+}
+
+.valores .text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    /* text-align: center; */
+    top: 15%;
+    /* Adjust this value to move the positioned div up and down */
+    /* background: rgba(0, 0, 0, 0.8); */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    width: 80%;
+    /* Set the width of the positioned div */
+}
+
+.valores img {
+    width: 100%;
+}
+
+.valores li {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.valores li:hover {
+    color: #FF00AE;
+}
+
+
+/*FABRICA*/
+
+.circle-shadow {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    height: 20px;
+    width: 80%;
+    position: absolute;
+    margin-top: 15px;
+    top: 100%;
+    left: 14%;
+}
+
+
+/*CONTACTO*/
+
+.contacto-form .formulario {
+    border-right: 3px solid #001480;
+}
+
+#contact_ul {
+    list-style: none;
+    -webkit-padding-start: 0px;
+}
+
+#li_phone img {
+    font-size: 1.0em;
+    vertical-align: middle;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+
+#li_email img {
+    font-size: 1.0em;
+    vertical-align: middle;
+    margin-right: 10px;
+    padding-top: 1px;
+}
+
+
+/*SUBFOOTER**/
+
+.sub-footer {
+    background: url("../images/banner-1.png") no-repeat center;
+    background-size: cover;
+    /* background-color: rgba(0,0,0,0.75); */
+    /* background-blend-mode: multiply; */
+    height: 100%;
+    width: 100%;
+}
+
+.consumer {
+    font-style: italic;
+    font-weight: light;
+    font-size: 1.125em;
+}
+
+.consumer-1 {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+.footer {
+    background-color: #001480;
+    color: white;
+    height: 100%;
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+
+@media screen and (max-width: 768px) {
+    .images-b {
+        display: none;
+    }
+    .main {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(14, auto);
+        grid-template-areas: "banner banner banner" "barras barras barras" "contacto contacto contacto" "slider slider slider" "servicios servicios servicios" "somos somos somos" "mision mision mision" "vision vision vision" "valores valores valores" "fabrica fabrica fabrica" "envios envios envios" "form form form" "sub-foot sub-foot sub-foot" "footer footer footer";
+    }
+    .main .banner-1 {
+        grid-area: banner;
+        height: 90vh;
+    }
+    .main .image-main {
+        background: url("../images/menu.jpg") no-repeat center center;
+        background-size: cover;
+        height: 100%;
+    }
+    .main .barras {
+        grid-area: barras;
+        height: 40vh;
+        /* background-color: rebeccapurple; */
+    }
+    .main .contacto {
+        grid-area: contacto;
+        height: 70px;
+    }
+    .main .slider {
+        grid-area: slider;
+        /* background-color: chartreuse; */
+        height: 100vh;
+    }
+    .main .servicios {
+        grid-area: servicios;
+    }
+    .main .somos {
+        grid-area: somos;
+    }
+    .main .mision {
+        grid-area: mision;
+    }
+    .main .vision {
+        grid-area: vision;
+    }
+    .main .valores {
+        grid-area: valores;
+        height: 100vh;
+    }
+    .main .fabrica {
+        grid-area: fabrica;
+        height: 100%;
+    }
+    .main .envios {
+        grid-area: envios;
+        background-color: #FF00AE;
+        width: 100%;
+        color: #fff;
+    }
+    .main .contacto-form {
+        grid-area: form;
+        height: 100%;
+    }
+    .main .sub-footer {
+        grid-area: sub-foot;
+    }
+    .main .footer {
+        grid-area: footer;
+        height: 100%;
+    }
+    /*FONT STYLES*/
+    .products-title {
+        font-style: normal;
+        font-weight: bold;
+        color: #001480;
+        font-size: 120%;
+        text-transform: uppercase;
+    }
+    .title-black {
+        font-style: normal;
+        font-weight: bold;
+        color: #000;
+        font-size: 120%;
+        text-transform: uppercase;
+    }
+    .title-white {
+        font-style: normal;
+        font-weight: bold;
+        color: #ffff;
+        font-size: 120%;
+        text-transform: uppercase;
+    }
+    .title-valores {
+        font-style: normal;
+        font-weight: bold;
+        color: #ffff;
+        font-size: 180%;
+        border-bottom: 3px solid #FF00AE;
+    }
+    .list-valores {
+        font-style: italic;
+    }
+    .list-val {
+        display: inline-block;
+        float: left;
+    }
+    .info ul {
+        font-weight: 800;
+    }
+    .barras {
+        content: url("../images/BANNER.jpg");
+    }
+    .celular {
+        font-size: 8px;
+        color: #000;
+    }
+    .info-contacto a {
+        font-size: 80%;
+    }
+    .info-contacto img {
+        text-align: center;
+    }
+    .valores img {
+        display: none;
+    }
+    .valores {
+        background: url("../images/valores.jpg") no-repeat center center;
+        background-size: cover;
+        height: 100%;
+    }
+    .list-val li {
+        margin-bottom: 10px;
+    }
+    .valores .text {
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        font-size: 18px;
+        /* text-align: center; */
+        top: 5%;
+        /* Adjust this value to move the positioned div up and down */
+        /* background: rgba(0, 0, 0, 0.8); */
+        font-family: Arial, sans-serif;
+        color: #fff;
+        width: 80%;
+        /* Set the width of the positioned div */
+    }
+    /*CONTACTO*/
+    .contacto-form .formulario {
+        border-right: none;
+    }
+    .slider-deskt {
+        display: none;
+    }
+    .slider-mobil {
+        display: block;
+    }
+    .carousel-indicators {
+        bottom: -50px;
+    }
+    .carousel-indicators li {
+        background-color: #FF00AE;
+    }
+    .carousel-control-prev-icon {
+        color: #FF00AE;
+    }
+    .consumer {
+        font-style: italic;
+        font-weight: light;
+        font-size: 1.125em;
+        text-align: justify;
+    }
+    .consumer-1 {
+        font-weight: 900;
+        font-style: italic;
+        font-size: 1.25em;
+        text-align: justify;
+    }
+}
